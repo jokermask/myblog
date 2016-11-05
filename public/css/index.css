@@ -44,12 +44,13 @@
   width: 40%;
   text-align: left;
   font-size: 20px;
-  color: white; }
+  color: #dedbdb; }
   #personal-info > div {
     margin: 20px 0;
     margin-left: 90px; }
 
 .figure-wrap {
+  position: relative;
   display: inline-block;
   width: 130px;
   height: 130px;
@@ -59,14 +60,31 @@
   -webkit-clip-path: url("#figure-clip-shape");
   clip-path: url("#figure-clip-shape"); }
 
-.figure {
+#figure {
   width: 120px;
   height: 120px;
   margin: 5px;
+  cursor: pointer;
   -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
   clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
   -webkit-clip-path: url("#figure-clip-shape");
   clip-path: url("#figure-clip-shape"); }
+
+#dialog {
+  position: absolute;
+  bottom: 12px;
+  left: 19px;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 11px;
+  font-weight: bold;
+  color: black;
+  background: url("../img/dialog.png") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 0; }
 
 .base-info {
   display: inline-block;
@@ -80,7 +98,6 @@
 
 .git-link {
   vertical-align: bottom;
-  color: white;
   text-decoration: underline; }
   .git-link:before {
     content: "";

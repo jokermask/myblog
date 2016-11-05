@@ -2,6 +2,7 @@
 $game-bg: url("../img/dota2bg.jpg") ;
 $life-bg: url("../img/lifebg.jpg") ;
 $git-icon: url("../img/git-icon.png") ;
+$dialog: url("../img/dialog.png") ;
 
 #main-body{
   width: 100%;
@@ -56,7 +57,7 @@ $git-icon: url("../img/git-icon.png") ;
   width: 40%;
   text-align: left;
   font-size: 20px;
-  color:white;
+  color: $base-font-color;
   &>div{
     margin: 20px 0;
     margin-left: 90px;
@@ -66,6 +67,7 @@ $git-icon: url("../img/git-icon.png") ;
 
 
 .figure-wrap{
+  position: relative;
   display: inline-block;
   width: 130px;
   height: 130px;
@@ -76,14 +78,32 @@ $git-icon: url("../img/git-icon.png") ;
   clip-path: url("#figure-clip-shape");
 }
 
-.figure{
+#figure{
   width: 120px;
   height: 120px;
   margin: 5px;
+  cursor: pointer;
   -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
   clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
   -webkit-clip-path: url("#figure-clip-shape");
   clip-path: url("#figure-clip-shape");
+}
+
+#dialog{
+  position: absolute;
+  bottom: 12px;
+  left: 19px;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 11px;
+  font-weight: bold;
+  color: black;
+  background: $dialog no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .base-info{
@@ -100,7 +120,6 @@ $git-icon: url("../img/git-icon.png") ;
 
 .git-link{
   vertical-align: bottom;
-  color: white;
   text-decoration: underline;
   &:before{
     content: "";
