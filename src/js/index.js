@@ -1,6 +1,9 @@
 /**
  * Created by 天俊sama on 2016/9/25.
  */
+import React from 'react'
+import { render } from 'react-dom'
+
 var storage = window.localStorage;
 
 $(function(){
@@ -8,8 +11,22 @@ $(function(){
 });
 
 function init(){
-    storage.setItem("count", 0);
+    if(!storage.getItem("count")) {
+        storage.setItem("count", 0);
+    }
     initClick() ;
+    initReact() ;
+}
+
+function initReact(){
+    class HelloWorld extends React.Component {
+        render() {
+            return (
+                <div>Hello World</div>
+            );
+        }
+    }
+    render(<HelloWorld />, $('#content')[0]);
 }
 
 function initClick(){
