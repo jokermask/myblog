@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+var path = require('path') ;
 
 module.exports = {
   entry: {
@@ -7,17 +8,18 @@ module.exports = {
     main:'./src/js/main.js'
   },
   output: {
-    filename: '[name].js'
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [ '*','.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader"
+        use: "babel-loader"
       }
     ]
   },
@@ -36,19 +38,11 @@ module.exports = {
       $: 'jquery'
     }),//直接定义第三方库
 
-    new CommonsChunkPlugin({
-      name: "commons",
-      // (the commons chunk name)
-
-      filename: "commons.js",
-      // (the filename of the commons chunk)
-
-      minChunks: 2,
-      // (Modules must be shared between 3 entries)
-
-      chunks: ["index", "main"]
-      // (Only use these entries)
-    })//定义公共chunk
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'commons',
+      filename: 'commons.js',
+      minChunks: 2
+    })
 
   ]
 };

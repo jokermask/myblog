@@ -1,16 +1,16 @@
 // 载入外挂
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    cleancss = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
-    webpack = require('gulp-webpack'),
+    webpack = require('webpack-stream'),
     fileinclude = require('gulp-file-include'),
     ejs = require("gulp-ejs");
 
@@ -24,7 +24,7 @@ gulp.task('styles', function() {
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
       .pipe(gulp.dest('public/css'))
       .pipe(rename({ suffix: '.min' }))
-      .pipe(minifycss())
+      .pipe(cleancss({compatibility: 'ie8'}))
       .pipe(gulp.dest('public/css'))
       .pipe(notify({ message: 'Styles task complete' }));
 });
