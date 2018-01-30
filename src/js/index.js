@@ -26,7 +26,7 @@ function initReact(){
             );
         }
     }
-    render(<HelloWorld />, $('#content')[0]);
+    render(<HelloWorld/>, $('#content')[0]);
 }
 
 function initClick(){
