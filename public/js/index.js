@@ -9548,6 +9548,7 @@ function init() {
     }
     initClick();
     initReact();
+    initScroll();
 }
 
 function initReact() {
@@ -9570,11 +9571,13 @@ function initClick() {
         let dialog = $("#dialog");
         let idx = Math.floor(Math.random() * 4);
         let count = storage.getItem("count");
+
         if (count == 6) {
             dialog.text(words[4]);
             dialog.css("color", "red");
             $("#figure")[0].src = "img/figure2.jpg";
         } else {
+            console.log(count);
             while (dialog.text() == words[idx]) {
                 idx = Math.floor(Math.random() * 4);
             }
@@ -9582,11 +9585,46 @@ function initClick() {
             count++;
             storage.setItem("count", count);
         }
+        dialog.css('z-index', 10);
         dialog.animate({ opacity: '1' }, 1500, function () {
             setTimeout(function () {
-                dialog.css("opacity", "0");
+                dialog.css({ "opacity": "0", "z-index": "-1" });
             }, 500);
         });
+    });
+}
+
+function initScroll() {
+
+    //js模拟垂直滚轮滑动
+    var scrollEle = $('#personal-info');
+    var scrollWrap = $('#personal-info-wrap');
+    var scrollSpd = 20; //滚轮滚动的速度
+    var Max_dist = scrollEle.height() - scrollWrap.height(); //两个组件底边之间的最大距离
+    if (Max_dist <= 0) {
+        return;
+    }
+
+    scrollEle.bind('mousewheel', function (event) {
+
+        var step = scrollSpd;
+        event.preventDefault();
+        event = event.originalEvent;
+        //兼容firefox
+        event.delta = event.wheelDelta ? event.wheelDelta / 120 : -(event.detail || 0) / 3;
+        var tempPos = parseInt(scrollEle.css('bottom'));
+        console.log(tempPos);
+        if (event.delta > 0) {
+            if (tempPos > -Max_dist) {
+                tempPos - step > -Max_dist ? tempPos = tempPos - step : tempPos = -Max_dist;
+            }
+        } else {
+            if (tempPos < 0) {
+                tempPos + step < 0 ? tempPos = tempPos + step : tempPos = 0;
+            }
+        }
+        console.log(tempPos);
+        scrollEle.css('bottom', tempPos);
     });
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))

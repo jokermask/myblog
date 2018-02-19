@@ -6,8 +6,10 @@ $dialog: url("../img/dialog.png") ;
 
 #main-body{
   width: 100%;
+  min-width: 1200px ;
   height: 100%;
   background-color: black;
+  overflow: hidden;
 }
 
 //life part
@@ -52,10 +54,17 @@ $dialog: url("../img/dialog.png") ;
 }
 
 //info part
-#personal-info{
+#personal-info-wrap{
+  position: relative;
   float: left;
-  height: 100%;
   width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#personal-info{
+  position: absolute;
+  width: 100%;
   text-align: left;
   font-size: 20px;
   color: $base-font-color;
@@ -70,8 +79,8 @@ $dialog: url("../img/dialog.png") ;
 .figure-wrap{
   position: relative;
   display: inline-block;
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   background: white;
   -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
   clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
@@ -80,8 +89,8 @@ $dialog: url("../img/dialog.png") ;
 }
 
 #figure{
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin: 5px;
   cursor: pointer;
   -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
@@ -105,28 +114,34 @@ $dialog: url("../img/dialog.png") ;
   background-size: contain;
   cursor: pointer;
   opacity: 0;
+  z-index: -1;
 }
 
 .base-info{
   display: inline-block;
   margin: 0 10px;
-  vertical-align: bottom;
+  vertical-align: top;
   text-align: left;
-  p:nth-child(1){
+  .name-info{
     font-size: 30px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 5px 0;
+  }
+  .contact-info{
+    display: inline-block;
   }
 }
 
 .git-link{
   vertical-align: bottom;
+  color: white;
   text-decoration: underline;
   &:before{
     content: "";
     display: inline-block;
     width: 30px;
     height: 30px;
+    margin-left: 10px;
     background: $git-icon no-repeat center center;
     background-size: cover;
   }
@@ -159,10 +174,22 @@ $dialog: url("../img/dialog.png") ;
   }
 }
 
+.time-stamp{
+  margin-right: 15px;
+  color: darkturquoise;
+}
+
 .brief-title{
   margin-bottom: 10px;
   &:before{
     background-color: red;
+  }
+}
+
+.edu-title{
+  margin-bottom: 10px;
+  &:before{
+    background-color: green;
   }
 }
 
