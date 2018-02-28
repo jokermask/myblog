@@ -20,14 +20,14 @@ function init(){
 }
 
 function initReact(){
-    class HelloWorld extends React.Component {
-        render() {
-            return (
-                <div>Hello World</div>
-            );
-        }
-    }
-    render(<HelloWorld/>, $('#content')[0]);
+    //class HelloWorld extends React.Component {
+    //    render() {
+    //        return (
+    //            <div>Hello World</div>
+    //        );
+    //    }
+    //}
+    //render(<HelloWorld/>, $('#content')[0]);
 }
 
 function initClick(){
