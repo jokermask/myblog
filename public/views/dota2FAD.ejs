@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>dota2攻击机制</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/dota2.css">
+        <script src="js/commons.js" charset="utf-8"></script>
+        <script src="js/dota2FAD.js"></script>
+    </head>
+    <body>
+        <div>
+            <h3>dota2最终攻击伤害结算</h3>
+            <div id="formula">
+                <p class="sub-title">计算公式</p>
+                <p>伤害=</p>
+                <p>{ [Main Damage × (1 + Σ Percentage Bonuses) + Flat Bonuses]</p>
+                <p>× Crit Multiplier - Blocked Damage }</p>
+                <p>× Armor Multipliers</p>
+                <p>× General Damage Multipliers</p>
+            </div>
+            <div class="entry-info">
+                <p class="sub-title">基础攻击伤害</p>
+                <p class="entry-intro">基础攻击伤害是主要攻击伤害的一部分，在整个游戏中永远不会改变。 它由两个值组成，即最小值和最大值。 每次发起攻击时，都会选择这两个极端之间的随机值。 最好的例子就是混沌骑士，因为他的基础伤害介于29到59之间。无论多少属性或获得多少额外伤害，30的差异总是总攻击伤害的一部分。</p>
+            </div>
+            <div class="entry-info">
+                <p class="sub-title">主要攻击伤害</p>
+                <p class="entry-intro">主要攻击伤害是英雄统计数据中白色数字显示的伤害值，包括基础伤害和英雄主要属性给予的伤害。(关系为：主要攻击伤害=基础攻击伤害+属性提供的数值） 所以提高英雄的主要攻击伤害的唯一方法是增加其主要属性。 属性可以通过获取等级以及特定的技能和项目来增加。 属性提供的攻击数值是和英雄的主要属性对应的，力量、敏捷、智力英雄在得到对应属性的提升时才会有主要攻击伤害的增加。</p>
+            </div>
+            <div class="entry-info">
+                <p class="sub-title">百分比伤害加成</p>
+                <p class="entry-info">能提供这种加成的有 弗拉基米尔的祭品、复仇之魂的复仇光环、斯温的神之力量</p>
+            </div>
+            <div class="entry-info">
+                <p class="sub-title">附加伤害</p>
+                <p class="entry-info">附加伤害是单位统计中以绿色数字显示的伤害值。 每当一件物品或技能显示+伤害值时，就会增加受影响单位的额外伤害</p>
+                <p class="entry-info">比如物品相位鞋提供+24的附加伤害，痛苦之源的技能“虚弱”提供攻击减弱，也就是负向的附加伤害</p>
+                <p class="entry-info">计算公式为：附加伤害=正向附加伤害之和+负向附加伤害之和</p>
+                <p>https://dota2.gamepedia.com/Attack_damage</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -179,6 +179,7 @@ $dialog: url("../img/dialog.png") ;
   color: darkturquoise;
 }
 
+
 .brief-title{
   margin-bottom: 10px;
   &:before{
@@ -199,9 +200,21 @@ $dialog: url("../img/dialog.png") ;
   }
 }
 
-.project-title{
-  &:before{
+.project-title {
+  &:before {
     background-color: purple;
+  }
+}
+
+.school-title{
+  &:before{
+    background-color: yellow;
+  }
+}
+
+.reward-title{
+  &:before{
+    background-color: deeppink;
   }
 }
 //game part
