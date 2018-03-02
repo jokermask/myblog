@@ -147,7 +147,11 @@
 
 .time-stamp {
   margin-right: 15px;
-  color: darkturquoise; }
+  color: aqua; }
+
+.game-type {
+  margin-right: 15px;
+  color: aqua; }
 
 .brief-title {
   margin-bottom: 10px; }
@@ -158,6 +162,9 @@
   margin-bottom: 10px; }
   .edu-title:before {
     background-color: green; }
+
+.played-title:before {
+  background-color: saddlebrown; }
 
 .intern-title:before {
   background-color: deepskyblue; }

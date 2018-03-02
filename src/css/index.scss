@@ -176,9 +176,13 @@ $dialog: url("../img/dialog.png") ;
 
 .time-stamp{
   margin-right: 15px;
-  color: darkturquoise;
+  color: aqua;
 }
 
+.game-type{
+  margin-right: 15px;
+  color: aqua;
+}
 
 .brief-title{
   margin-bottom: 10px;
@@ -187,10 +191,17 @@ $dialog: url("../img/dialog.png") ;
   }
 }
 
+
 .edu-title{
   margin-bottom: 10px;
   &:before{
     background-color: green;
+  }
+}
+
+.played-title{
+  &:before{
+    background-color: saddlebrown;
   }
 }
 
