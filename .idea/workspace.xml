@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c92663a-33c2-470a-af53-4da0ad949514" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/dota2.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/dota2FAD.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/dota2FAD.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/20e32dcbd623ae91a7a2fed30c4b6eef97d7f544/index.scssc" afterPath="$PROJECT_DIR$/.sass-cache/20e32dcbd623ae91a7a2fed30c4b6eef97d7f544/index.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.min.css" afterPath="$PROJECT_DIR$/public/css/index.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/index.ejs" afterPath="$PROJECT_DIR$/public/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/index.scss" afterPath="$PROJECT_DIR$/src/css/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/index.ejs" afterPath="$PROJECT_DIR$/src/views/index.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/dota2FAD.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/dota2FAD.ejs" afterPath="$PROJECT_DIR$/public/views/dota2FAD.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/dota2FAD.ejs" afterPath="$PROJECT_DIR$/src/views/dota2FAD.ejs" />
     </list>
     <ignored path="myblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/public/views/dota2FAD.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.214286">
-              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+              <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -107,8 +98,8 @@
       <file leaf-file-name="dota2FAD.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/dota2FAD.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9644195">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.78651685">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -451,7 +442,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -814,7 +805,7 @@
     <entry file="file://$PROJECT_DIR$/public/views/dota2FAD.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.214286">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -869,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/dota2FAD.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9644195">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.78651685">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding />
         </state>
       </provider>
