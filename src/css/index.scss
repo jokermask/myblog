@@ -147,6 +147,11 @@ $dialog: url("../img/dialog.png") ;
   }
 }
 
+.out-link{
+  text-decoration: underline;
+  color: white;
+}
+
 .sub-title{
   font-weight: bold;
   &:before{

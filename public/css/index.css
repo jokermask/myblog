@@ -120,6 +120,10 @@
     background: url("../img/git-icon.png") no-repeat center center;
     background-size: cover; }
 
+.out-link {
+  text-decoration: underline;
+  color: white; }
+
 .sub-title {
   font-weight: bold; }
   .sub-title:before {
