@@ -1,0 +1,27 @@
+$hp-wrap-color: #eaeaea;
+$hp-val-color: limegreen ;
+
+.figure-wrap{
+  display: inline-block;
+}
+.hp-wrap{
+  display: inline-block;
+  height: 15px;
+  margin: 2.5px;
+  border-radius: 7.5px;
+  width: 300px;
+  vertical-align: top;
+  background-color: $hp-wrap-color ;
+  overflow: hidden;
+}
+
+.hp{
+  background-color: $hp-val-color ;
+  border-radius: 7.5px;
+  width: 10px;
+  height: 15px;
+}
+
+.hp-val{
+  display: inline-block;
+}
