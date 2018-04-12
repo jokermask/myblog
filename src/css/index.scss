@@ -119,9 +119,10 @@ $dialog: url("../img/dialog.png") ;
 
 .base-info{
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 10px;
   vertical-align: top;
   text-align: left;
+  font-size: 18px;
   .name-info{
     font-size: 30px;
     font-weight: bold;

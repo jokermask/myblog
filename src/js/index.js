@@ -76,6 +76,7 @@ function initScroll(){
     if(Max_dist<=0){
         return ;
     }
+    scrollEle.css('bottom',-Max_dist) ;
 
     scrollEle.bind('mousewheel',function(event){
 
@@ -87,15 +88,17 @@ function initScroll(){
         var tempPos = parseInt(scrollEle.css('bottom')) ;
         console.log(tempPos) ;
         if(event.delta>0){
+            //scroll up
             if(tempPos>(-Max_dist)){
                 tempPos-step>(-Max_dist)? tempPos = tempPos-step : tempPos = -Max_dist ;
             }
         }else{
+            //scroll down
             if(tempPos<0){
                 tempPos+step<0? tempPos = tempPos+step : tempPos = 0 ;
             }
         }
-        console.log(tempPos) ;
+        //console.log(tempPos) ;
         scrollEle.css('bottom',tempPos) ;
     });
 }

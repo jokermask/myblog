@@ -97,9 +97,10 @@
 
 .base-info {
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 10px;
   vertical-align: top;
-  text-align: left; }
+  text-align: left;
+  font-size: 18px; }
   .base-info .name-info {
     font-size: 30px;
     font-weight: bold;
