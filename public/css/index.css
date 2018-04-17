@@ -1,3 +1,15 @@
+@-webkit-keyframes myfirst {
+  from {
+    background: red; }
+  to {
+    background: yellow; } }
+
+@keyframes myfirst {
+  from {
+    background: red; }
+  to {
+    background: yellow; } }
+
 #main-body {
   width: 100%;
   min-width: 1200px;
@@ -19,6 +31,7 @@
   shape-outside: polygon(0 100%, 0 0, 100% 0, 80% 100%);
   -webkit-clip-path: url("#life-clip-shape");
   clip-path: url("#life-clip-shape");
+  -webkit-transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99); }
   #life-part:hover {
     background: url("../img/lifebg.jpg") no-repeat right center;
@@ -34,6 +47,7 @@
   right: 30%;
   color: black;
   font-weight: bold;
+  -webkit-transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   opacity: 0; }
   .life-title p:nth-child(1) {
@@ -135,6 +149,7 @@
     vertical-align: middle;
     content: "";
     opacity: .8;
+    -webkit-transition: all 1s;
     transition: all 1s;
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
     clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
@@ -164,7 +179,10 @@
     background-color: red; }
 
 .edu-title {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5); }
   .edu-title:before {
     background-color: green; }
 
@@ -192,6 +210,7 @@
   background-size: cover;
   opacity: .5;
   cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   -webkit-clip-path: polygon(100% 100%, 40% 0, 100% 0, 100% 100%);
   clip-path: polygon(100% 100%, 40% 0, 100% 0, 100% 100%);
@@ -212,6 +231,7 @@
   left: 30%;
   color: white;
   font-weight: bold;
+  -webkit-transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   transition: all 1s cubic-bezier(0.66, 0, 0.28, 0.99);
   opacity: 0; }
   .game-title p:nth-child(1) {

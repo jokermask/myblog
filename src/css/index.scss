@@ -4,6 +4,12 @@ $life-bg: url("../img/lifebg.jpg") ;
 $git-icon: url("../img/git-icon.png") ;
 $dialog: url("../img/dialog.png") ;
 
+@keyframes myfirst
+{
+  from {background: red;}
+  to {background: yellow;}
+}
+
 #main-body{
   width: 100%;
   min-width: 1200px ;

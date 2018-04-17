@@ -1,6 +1,6 @@
 // 载入外挂
 let gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     cleancss = require('gulp-clean-css'),
@@ -12,21 +12,34 @@ let gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     webpack = require('webpack-stream'),
     fileinclude = require('gulp-file-include'),
-    ejs = require("gulp-ejs");
+    ejs = require("gulp-ejs"),
+    concat = require("gulp-concat");
 
 
 // 样式
 gulp.task('styles', function() {
-  return sass('src/css/*.scss',{"sourcemap=none": true})
-      .on('error', function (err) {
-          console.error('Error!', err.message);
-      })
-      .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-      .pipe(gulp.dest('public/css'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(cleancss({compatibility: 'ie8'}))
-      .pipe(gulp.dest('public/css'))
-      .pipe(notify({ message: 'Styles task complete' }));
+    return gulp.src('src/css/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
+        }))
+        .pipe(gulp.dest('public/css'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleancss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('public/css'))
+        .pipe(notify({ message: 'Styles task complete' }));
+  //return sass('src/css/*.scss',{sourcemap: true})
+  //    .on('error', function (err) {
+  //        console.error('Error!', err.message);
+  //    })
+  //    .pipe(sourcemaps.init())
+  //    .pipe(autoprefixer('last 2 version'))
+  //    .pipe(sourcemaps.write('.'))
+  //    .pipe(gulp.dest('public/css'))
+  //    .pipe(rename({ suffix: '.min' }))
+  //    .pipe(cleancss({compatibility: 'ie8'}))
+  //    .pipe(gulp.dest('public/css'))
+  //    .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // 脚本
