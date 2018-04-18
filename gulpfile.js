@@ -28,18 +28,7 @@ gulp.task('styles', function() {
         .pipe(cleancss({compatibility: 'ie8'}))
         .pipe(gulp.dest('public/css'))
         .pipe(notify({ message: 'Styles task complete' }));
-  //return sass('src/css/*.scss',{sourcemap: true})
-  //    .on('error', function (err) {
-  //        console.error('Error!', err.message);
-  //    })
-  //    .pipe(sourcemaps.init())
-  //    .pipe(autoprefixer('last 2 version'))
-  //    .pipe(sourcemaps.write('.'))
-  //    .pipe(gulp.dest('public/css'))
-  //    .pipe(rename({ suffix: '.min' }))
-  //    .pipe(cleancss({compatibility: 'ie8'}))
-  //    .pipe(gulp.dest('public/css'))
-  //    .pipe(notify({ message: 'Styles task complete' }));
+
 });
 
 // 脚本
@@ -48,22 +37,7 @@ gulp.task('scripts', function(callback) {
       .pipe(webpack( require('./webpack.config.js') ))
       .pipe(gulp.dest('public/js'));
 });
-//gulp.task('scripts', function() {
-//  return gulp.src(['src/**/*.js'])
-//      .pipe(order([
-//        "lib/jquery-2.0.3.min.js",
-//        "lib/*.js",
-//        "js/*.js"
-//      ]))
-//      .pipe(jshint('.jshintrc'))
-//      .pipe(jshint.reporter('default'))
-//      .pipe(concat('main.js'))
-//      .pipe(gulp.dest('dist/js'))
-//      .pipe(rename({ suffix: '.min' }))
-//      .pipe(uglify())
-//      .pipe(gulp.dest('dist/js'))
-//      .pipe(notify({ message: 'Scripts task complete' }));
-//});
+
 
 // 图片
 gulp.task('images', function() {

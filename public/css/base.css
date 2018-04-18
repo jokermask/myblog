@@ -11,3 +11,12 @@ html, body {
 
 a {
   text-decoration: none; }
+
+.hide {
+  display: none; }
+
+.visible {
+  opacity: 1; }
+
+.invisible {
+  opacity: 0; }

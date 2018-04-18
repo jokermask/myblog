@@ -31,7 +31,9 @@ function initReact(){
 }
 
 function initClick(){
-    $("#figure").click(function(){
+    //figure click
+    var figEle = $("#figure") ;
+    figEle.click(()=>{
         //dialog
         let words = [
             "你好呀~",
@@ -47,7 +49,7 @@ function initClick(){
         if(count==6){
             dialog.text(words[4]) ;
             dialog.css("color","red")
-            $("#figure")[0].src = "img/figure2.jpg" ;
+            figEle[0].src = "img/figure2.jpg" ;
         }else {
             console.log(count) ;
             while (dialog.text() == words[idx]) {
@@ -64,6 +66,18 @@ function initClick(){
             },500) ;
         }) ;
     });
+    //life part click
+    var life_part_ele = $("#life-part") ;
+    var life_title_ele = $(".life-title") ;
+    var pj_list = $("#pj-list") ;
+    life_part_ele.click(()=>{
+        life_title_ele.toggle() ;
+        life_part_ele.toggleClass("bg-shrink-l") ;
+        life_part_ele.toggleClass("bg-spread") ;
+        pj_list.toggleClass("visible") ;
+        pj_list.toggleClass("invisible") ;
+    }) ;
+
 }
 
 function initScroll(){
@@ -78,7 +92,7 @@ function initScroll(){
     }
     scrollEle.css('bottom',-Max_dist) ;
 
-    scrollEle.bind('mousewheel',function(event){
+    scrollEle.bind('mousewheel',event=>{
 
         var step = scrollSpd ;
         event.preventDefault() ;
